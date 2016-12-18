@@ -1,0 +1,155 @@
+
+html{
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none
+}
+
+body {
+    padding-top: 70px;
+    overflow-x: hidden;
+}
+audio{
+    width:100%;
+}
+#media{
+    margin-top:7px;
+}
+#statistics {
+    font-size: 20px;
+}
+.divider {
+    background:none;
+    border:none;
+}
+.navbar-header:after {
+    display: block;
+}
+.media > .thumbnail {
+    width:100%;
+}
+
+a.search {
+    float:right;
+}
+#description {
+    white-space: pre-wrap;
+}
+
+#form {
+    margin-top:13px;
+    margin-bottom: 3px;
+}
+
+a.thumbnail{
+    min-width:100%;
+    display: inline-flex;
+    text-decoration: none;
+    /*min-height: 106px;*/
+}
+
+a.thumbnail h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 26px;
+    max-height: 55px;
+    min-height: 55px;
+    margin: 3px 0 0 0;
+}
+a.thumbnail .caption {
+    margin-left: 5px;
+    padding-right:0px;
+}
+a.thumbnail .caption p.author {
+    font-size:15px;
+    margin: 12px 0 -10px 0;
+    max-height: 20px;
+    overflow-y: hidden;
+}
+a.thumbnail img {
+    width:100%;
+}
+a.thumbnail .image {
+    width:39%;
+    overflow-x: hidden;
+}
+a.thumbnail .caption {
+    padding-top:0px;
+    margin-right: 2%;
+    max-width: 58%;
+    overflow-x: hidden;
+}
+#results {
+    min-height: calc(100% - 362px);
+}
+#results .col-sm-12.text{
+    min-height: 160px;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.text { text-align: center; }
+.footer a {
+    float:right;
+    margin: 18px 0 0 20px;
+}
+.footer p {
+    float:left;
+    margin: 18px 0 0 0;
+}
+
+.ads {
+    background: #337ab7;
+    min-height: 110px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    body { padding-top: 50px; }
+    .panel{
+        border-radius:0;
+    }
+    .ads {
+        padding:0;
+    }
+    a.thumbnail{
+        min-height: 60px;
+    }
+    a.thumbnail .caption p.author {
+        font-size:10px;
+        margin: 7px 0 -10px 0;
+    }
+
+    .related {
+        margin: 0 0 0 0;
+    }
+    footer {
+        margin-top:-20px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #results {
+        min-height: calc(100% - 340px);
+    }
+
+    a.thumbnail h4 {
+        margin-top:5px;
+        font-size: 13px;
+        line-height: 19px;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        max-height: 38px;       /* fallback */
+        min-height: 38px;       /* fallback */
+        margin-bottom: 0;
+    }
+}

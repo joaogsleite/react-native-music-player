@@ -1,0 +1,114 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Youtubify Search</title>
+
+
+<link rel="icon" href="/images/logo_mobile.png">
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="/images/logo_mobile.png">
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Youtubify">
+<link rel="apple-touch-icon-precomposed" href="/images/logo_mobile.png">
+<link rel="manifest" href="/js/manifest.json">
+
+<meta property="og:title" content="Youtubify"/>
+<meta property="og:url" content="http://ytify.com/search" />
+<meta property="og:image" content="http://ytify.com/images/logo.png"/>
+<meta property="og:site_name" content="Youtubify"/>
+<meta property="og:description" content="Listen audio from youtube videos. Save mobile data." />
+<meta property="og:type" content="website" />
+<meta name="description" content="Listen audio from youtube videos. Save mobile data.">
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6740415582536273",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script src='/js/main.js'></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82888146-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-inner">
+                <a class="navbar-brand" href="/">
+                    Youtubify
+                    <span class="label label-primary">Alfa</span>
+                </a>
+            </div>
+            <div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <form id="form" onsubmit="return false;">
+                <div class="input-group">
+                    <input autocomplete="off" id="search" type="text" class="form-control" placeholder="Search on youtube">
+                    <div class="input-group-btn">
+                        <button id="search_button" type="button" class="btn btn-primary navbar-btn" style="height:34px; margin-top:0;">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="panel-body">
+                <div class="row" id="results">
+                    <div class="col-sm-12 text">
+                    Search for something on youtube...
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <br />
+                <ul class="list-group" >
+                    <li class="list-group-item ads">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Bottom --><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-6740415582536273" data-ad-slot="4174131749" data-ad-format="auto"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src='/js/search.js'></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="text-muted">
+                <p>
+                    João Leite
+                </p>
+                <a href="http://github.com/joaaoleite">
+                    GitHub
+                </a>
+                <a href="http://twitter.com/joaaoleite">
+                    Twitter
+                </a>
+                <a href="http://facebook.com/joaaoleite">
+                    Facebook
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
