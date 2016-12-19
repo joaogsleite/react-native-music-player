@@ -9,8 +9,8 @@ export default class Search extends Component {
 
   	render() {
 		return <View style={styles.container}>
-			<View style={[styles.header,{height:60, flexDirection:'row'  }]}>
-				<TextInput autoFocus={true} ref='Input' style={styles.search} placeholder="Search..." />
+			<View style={[styles.header,{height:60, flexDirection:'row', borderWidth:0 }]}>
+				<TextInput underlineColorAndroid="transparent" autoFocus={true} ref='Input' style={styles.search} placeholder="Search..." />
 				<Button transparent onPress={this.props.search} style={styles.button}>
 					<Icon name='ios-close' style={styles.icon} />
 				</Button>

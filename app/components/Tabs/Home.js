@@ -9,6 +9,10 @@ export default class Home extends Component {
 		return <View style={{flex:1}}>
 			<Container>
                 <Content>
+					<Item playing={true} />
+					<Item />
+					<Item />
+					<Item />
 					<Item />
                 </Content>
             </Container>
