@@ -19,7 +19,18 @@ let styles = StyleSheet.create({
 	play: {
 		color: 'white',
 		fontSize: 44,
-		textAlign: 'center',
+	},
+	bar: {
+		height: 5,
+		flexDirection: 'row',
+	},
+	progress : {
+		backgroundColor: 'red',
+		flex: 1
+	},
+	left: {
+		backgroundColor: '#303030',
+		flex: 10
 	}
 })
 
@@ -33,15 +44,25 @@ export default class Player extends Component {
 		}
 	}
 
+	play(e){
+		this.setState({playing:!this.state.playing})
+	}
+
 	render(){
 		let play = this.state.playing?<Icon style={styles.play} name='ios-pause' />:<Icon style={styles.play} name='ios-play' />
 
 		return <View style={styles.container}>
+			<View style={styles.bar}>
+				<View style={styles.progress} />
+				<View style={styles.left} />
+			</View>
 			<View style={{ height:30, justifyContent: 'center'}}>
 				<Text style={styles.music}> {this.state.music} </Text>
 			</View>
-			<View style={{ justifyContent: 'center'}}>
-				{play}
+			<View>
+				<Text style={{textAlign: 'center'}} onPress={this.play.bind(this)} >
+					{play}
+				</Text>
 			</View>
 		</View>
 	}

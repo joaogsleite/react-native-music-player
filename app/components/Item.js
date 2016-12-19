@@ -14,7 +14,7 @@ export default class Home extends Component {
 		let playing = this.props.playing?{backgroundColor:'#ffffdd'}:{}
 		return <Card style={[styles.card,playing]}>
 			<CardItem onPress={this.handleClik.bind(this)} style={styles.carditem}>
-				<Thumbnail style={styles.thumbnail} size={70} square source={{uri:'https://i.ytimg.com/vi/C-u5WLJ9Yk4/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=YH7T5D7oYViB4QxadO-H5O6eJMw'}} />
+				<Thumbnail style={styles.thumbnail} size={70} square source={{uri:'https://i.ytimg.com/vi/YQHsXMglC9A/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=GNa8_rh4DM-P9DT_vW-WlKr7mM0'}} />
 				<Text style={styles.card_text}>Britney Spears - ...Baby One More Timbaby One More Tim</Text>
 				<View style={{ flexDirection: 'row'}}>
 					<View style={styles.card_info} transparent textStyle={styles.card_info}>

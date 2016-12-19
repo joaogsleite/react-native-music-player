@@ -43,7 +43,7 @@ export default class Tabs extends Component {
   	}
 
   	renderScene({ route }){
-		return <View style={{flex:1,paddingTop:3, paddingLeft: 7, paddingRight:7}} >
+		return <View style={{flex:1}} >
 			{this.props.children[route.key-1]}
 		</View>
   	}
