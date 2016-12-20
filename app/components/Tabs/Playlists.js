@@ -5,7 +5,6 @@ import { Icon, List, ListItem, Text, Badge  } from 'native-base'
 export default class Playlists extends Component {
 	render(){
 		return <View style={{flex:1}}>
-
 			<List>
                 <ListItem iconLeft>
                     <Icon name="md-list" style={{ color: '#656565' }} />
