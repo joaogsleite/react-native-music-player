@@ -1,31 +1,35 @@
 
 import React, { Component } from 'react'
-import { View } from 'react-native'
-import { Provider } from 'react-redux'
-
-import Main from './Main'
-import Search from './Search'
+import { View, StatusBar } from 'react-native'
+import { Provider, connect } from 'react-redux'
+import { Router, Scene, Actions, Modal } from 'react-native-router-flux';
 
 import store from '../store'
 
-export default class App extends Component {
-	constructor(props){
-		super(props)
-		this.state = {
-			search : false
-		}
-	}
-	search(e){
-		this.setState({search: !this.state.search})
-	}
-  	render() {
+const RouterWithRedux = connect()(Router);
 
-		let display = this.state.search?<Search search={this.search.bind(this)} />:<Main search={this.search.bind(this)} />
+import Main from './Scenes/Main'
+import Search from './Scenes/Search'
+import Playlist from './Scenes/Playlist'
+
+import ItemSelected from './Modals/ItemSelected'
+
+export default class App extends Component {
+
+  	render() {
+		StatusBar.setBarStyle('light-content', true);
 
 		return <Provider store={store}>
-			<View style={{flex:1}}>
-				{display}
-			</View>
+			<RouterWithRedux>
+				<Scene key="modal" component={Modal} >
+				<Scene key="root" hideNavBar={true}>
+					<Scene key="home" component={Main} title="Home" />
+					<Scene key="playlist" component={Playlist} title="Home" />
+					<Scene duration={0} key="search" component={Search} title="Search"/>
+	      		</Scene>
+				<Scene key="selectItem" component={ItemSelected} />
+				</Scene>
+			</RouterWithRedux>
 		</Provider>
   	}
 }

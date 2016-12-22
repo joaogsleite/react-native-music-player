@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { ListItem, Thumbnail, Text, Icon } from 'native-base'
+import { Actions } from 'react-native-router-flux'
 
 const style = StyleSheet.create({
 	text: {
@@ -20,17 +21,24 @@ const style = StyleSheet.create({
 	}
 })
 
-export default class Home extends Component {
+export default class Item extends Component {
+
+	constructor(props){
+		super(props)
+		this.counter = 0;
+	}
 
 	handleClik(e){
+		this.counter++
+		Actions.selectItem({title:this.props.title, visible:true, id:'43rtegfew', clicked:this.counter })
 		return;
 	}
 
 	render(){
 		let playing = this.props.playing?{backgroundColor:'#ffffdd'}:{}
-		return <ListItem>
-    		<Thumbnail square size={70} source={{uri:'https://i.ytimg.com/vi/YQHsXMglC9A/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=GNa8_rh4DM-P9DT_vW-WlKr7mM0'}} />
-            <Text style={style.text}>Adele - HelloAdele - HelloAdele - Hello</Text>
+		return <ListItem onPress={this.handleClik.bind(this)}>
+    		<Thumbnail square size={70} source={{uri:'https://i.ytimg.com/vi/CduA0TULnow/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=aWKzp-5jJ78FuQ5LzMqiVu6M6Uo'}} />
+            <Text style={style.text}>{this.props.title}</Text>
             <View style={style.notes}>
 				<Text style={style.note}>
 					<Icon style={style.icon} name="md-time" />
@@ -43,23 +51,5 @@ export default class Home extends Component {
 			</View>
         </ListItem>
 
-
-
-		/*<Card style={[styles.card,playing]}>
-			<CardItem onPress={this.handleClik.bind(this)} style={styles.carditem}>
-				<Thumbnail style={styles.thumbnail} size={70} square source={{uri:'https://i.ytimg.com/vi/YQHsXMglC9A/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=GNa8_rh4DM-P9DT_vW-WlKr7mM0'}} />
-				<Text style={styles.card_text}>Britney Spears - ...Baby One More Timbaby One More Tim</Text>
-				<View style={{ flexDirection: 'row'}}>
-					<View style={styles.card_info} transparent textStyle={styles.card_info}>
-		            	<Icon style={styles.card_info_icon} name="md-person" />
-		                <Text style={styles.card_info_text}>BritneySpearsVEVO</Text>
-		            </View>
-					<View style={styles.card_info} transparent textStyle={styles.card_info}>
-		            	<Icon style={styles.card_info_icon}  name="md-time" />
-		                <Text style={styles.card_info_text}>04:33</Text>
-		            </View>
-				</View>
-			</CardItem>
-		</Card>*/
 	}
 }

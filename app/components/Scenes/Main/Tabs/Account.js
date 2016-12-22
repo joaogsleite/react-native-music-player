@@ -10,19 +10,19 @@ export default class Account extends Component {
                 <Text style={{marginTop:5}}>João Leite</Text>
 			</View>
 			<List>
-				<ListItem iconLeft>
+				<ListItem key={1} iconLeft>
 					<Icon name="ios-clock" style={{ color: '#656565' }} />
 					<Text>History</Text>
 				</ListItem>
-				<ListItem iconLeft>
+				<ListItem key={2} iconLeft>
 					<Icon name="md-stats" style={{ color: '#656565' }} />
 					<Text>Statistics</Text>
 				</ListItem>
-				<ListItem iconLeft>
+				<ListItem key={3} iconLeft>
 					<Icon name="md-film" style={{ color: '#656565' }} />
 					<Text>My videos</Text>
 				</ListItem>
-				<ListItem iconLeft>
+				<ListItem key={4} iconLeft>
 					<Icon name="md-person" style={{ color: '#656565' }} />
 					<Text>Sign out</Text>
 				</ListItem>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { View, StyleSheet,Text } from 'react-native'
 import { TabViewAnimated, TabBar } from 'react-native-tab-view'
+import { connect } from 'react-redux'
+
+import {changeTab } from '../../../../actions/routes'
 
 import { Icon } from 'native-base'
 
@@ -15,27 +18,32 @@ const styles = StyleSheet.create({
   },
 });
 
+@connect()
 export default class Tabs extends Component {
+
 	constructor(props){
 		super(props)
+		this.routes = []
 		this.state = {
 	    	index: 0,
 	      	routes: this.props.children.map((elem, k)=>{
-				return {key: (k+1)+'', title:elem.props.title}
+				this.routes[k] = elem.props.title
+				return {key: (k+1)+'', title:elem.props.title, icon:elem.props.icon }
 			}),
 	    }
 	}
 
-
   	handleChangeTab(index){
+		this.props.dispatch(changeTab(this.routes[index]))
     	this.setState({ index });
+		return;
   	}
 
 	renderIcon({ route }){
-		return <Icon style={{color:'white'}} name={route.title} />
+		return <Icon style={{color:'white'}} name={route.icon} />
 	}
 	renderLabel({ route }){
-		return ;
+		return;
 	}
 
   	renderHeader(props){

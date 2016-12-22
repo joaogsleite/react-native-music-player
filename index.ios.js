@@ -1,12 +1,15 @@
 
 import React, { Component } from 'react'
-import { AppRegistry } from 'react-native'
+import { AppRegistry, View } from 'react-native'
 
 import App from './app/components/App'
 
 export default class youtubify extends Component {
   	render() {
-    	return <App />
+    	return <View style={{flexDirection:'column',flex:1}}>
+			<View style={{height:15,backgroundColor:'red'}} />
+			<App style={{flex:1}}/>
+    	</View>
   	}
 }
 

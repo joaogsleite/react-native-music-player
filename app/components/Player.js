@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { Icon } from 'native-base'
 
-
-
 let styles = StyleSheet.create({
 	container: {
 		flex: 1,
