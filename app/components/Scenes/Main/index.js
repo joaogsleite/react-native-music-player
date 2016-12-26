@@ -14,7 +14,7 @@ import Header from '../../Header'
 
 const style =  StyleSheet.create({
 	container: { flex: 1 },
-	tabs : { flex: 5 },
+	tabs : { flex: 1 },
 })
 
 
@@ -39,7 +39,6 @@ export default class Main extends Component {
 					<Account icon='ios-person' title='Account' />
 				</Tabs>
 			</View>
-			<Player onSwipeBegin={this.swipe} />
 		</View>
 
   	}

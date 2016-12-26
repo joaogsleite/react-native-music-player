@@ -4,6 +4,7 @@ import { ActionConst } from 'react-native-router-flux';
 const initialState = {
 	scene: {},
 	tab: 'Home',
+	modal : false,
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -15,6 +16,9 @@ export default function reducer(state = initialState, action = {}) {
     	// ...other actions
 		case 'CHANGE_TAB':
 			return { ...state, tab: action.payload }
+
+		case 'MODAL':
+			return { ...state, modal: action.payload }
 
     	default:
       		return state;

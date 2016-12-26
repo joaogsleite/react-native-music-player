@@ -35,7 +35,6 @@ export default class Playlist extends Component {
 					</List>
                 </Content>
             </Container>
-			<Player />
 		</View>
 
   	}
